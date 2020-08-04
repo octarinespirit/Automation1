@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.8 on win32)" generated="20200804 18:41:13.926" rpa="false">
+<suite id="s1" name="TestCases" source="C:\Automation1\TestCases">
+<suite id="s1-s1" name="Login Test Case" source="C:\Automation1\TestCases\Login Test Case">
+<kw name="Before Each Test Suite" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test Suite Started</arg>
+</arguments>
+<msg timestamp="20200804 18:41:13.957" level="INFO">Test Suite Started</msg>
+<status status="PASS" starttime="20200804 18:41:13.957" endtime="20200804 18:41:13.957"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:13.957" endtime="20200804 18:41:13.957"></status>
+</kw>
+<suite id="s1-s1-s1" name="DataTest" source="C:\Automation1\TestCases\Login Test Case\DataTest.robot">
+<test id="s1-s1-s1-t1" name="Data Test">
+<kw name="Start Browser and Maximize" library="resources1">
+<arguments>
+<arg>${URL2}</arg>
+<arg>${Browser1}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL1}</arg>
+<arg>${Browser1}</arg>
+</arguments>
+<msg timestamp="20200804 18:41:17.484" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com'.</msg>
+<status status="PASS" starttime="20200804 18:41:17.484" endtime="20200804 18:41:23.203"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200804 18:41:23.203" endtime="20200804 18:41:25.321"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20200804 18:41:25.328" level="INFO">${Title} = Testing World Experienced in making experts</msg>
+<status status="PASS" starttime="20200804 18:41:25.322" endtime="20200804 18:41:25.328"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:17.483" endtime="20200804 18:41:25.328"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[text()='Login']</arg>
+</arguments>
+<msg timestamp="20200804 18:41:25.329" level="INFO">Clicking element 'xpath://a[text()='Login']'.</msg>
+<status status="PASS" starttime="20200804 18:41:25.329" endtime="20200804 18:41:26.266"></status>
+</kw>
+<kw name="Read Number of Rows" library="UserKeywords">
+<arguments>
+<arg>Sheet1</arg>
+</arguments>
+<assign>
+<var>${row}</var>
+</assign>
+<kw name="Fetch Number Of Rows" library="ReadData">
+<arguments>
+<arg>${sheetname}</arg>
+</arguments>
+<assign>
+<var>${maxr}</var>
+</assign>
+<msg timestamp="20200804 18:41:26.268" level="INFO">${maxr} = 4</msg>
+<status status="PASS" starttime="20200804 18:41:26.267" endtime="20200804 18:41:26.268"></status>
+</kw>
+<msg timestamp="20200804 18:41:26.268" level="INFO">${row} = 4</msg>
+<status status="PASS" starttime="20200804 18:41:26.266" endtime="20200804 18:41:26.268"></status>
+</kw>
+<kw name="$(i) IN RANGE [ 1 | ${row}+1 ]" type="for">
+<msg timestamp="20200804 18:41:26.269" level="FAIL">Invalid FOR loop variable '$(i)'.</msg>
+<status status="FAIL" starttime="20200804 18:41:26.269" endtime="20200804 18:41:26.269"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:17.483" endtime="20200804 18:41:26.270" critical="yes">Invalid FOR loop variable '$(i)'.</status>
+</test>
+<status status="FAIL" starttime="20200804 18:41:13.957" endtime="20200804 18:41:26.271"></status>
+</suite>
+<suite id="s1-s1-s2" name="TC 001 Start Close Browser" source="C:\Automation1\TestCases\Login Test Case\TC_001_Start_Close_Browser.robot">
+<test id="s1-s1-s2-t1" name="Robot First Test Case">
+<kw name="Start Browser and Maximize" library="resources1">
+<arguments>
+<arg>${URL1}</arg>
+<arg>${Browser1}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL1}</arg>
+<arg>${Browser1}</arg>
+</arguments>
+<msg timestamp="20200804 18:41:26.301" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<status status="PASS" starttime="20200804 18:41:26.301" endtime="20200804 18:41:30.880"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200804 18:41:30.880" endtime="20200804 18:41:33.025"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20200804 18:41:33.031" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20200804 18:41:33.026" endtime="20200804 18:41:33.031"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:26.300" endtime="20200804 18:41:33.031"></status>
+</kw>
+<kw name="Read Element Locator">
+<arguments>
+<arg>Registration.username_textbox_name</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<kw name="Read Locator From Json" library="Locators">
+<arguments>
+<arg>${JsonPath}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200804 18:41:33.034" level="INFO">${result} = fld_username</msg>
+<status status="PASS" starttime="20200804 18:41:33.033" endtime="20200804 18:41:33.034"></status>
+</kw>
+<msg timestamp="20200804 18:41:33.035" level="INFO">${username} = fld_username</msg>
+<status status="PASS" starttime="20200804 18:41:33.032" endtime="20200804 18:41:33.035"></status>
+</kw>
+<kw name="Read Element Locator">
+<arguments>
+<arg>Registration.email_textbox_name</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<kw name="Read Locator From Json" library="Locators">
+<arguments>
+<arg>${JsonPath}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200804 18:41:33.037" level="INFO">${result} = fld_email</msg>
+<status status="PASS" starttime="20200804 18:41:33.036" endtime="20200804 18:41:33.037"></status>
+</kw>
+<msg timestamp="20200804 18:41:33.038" level="INFO">${email} = fld_email</msg>
+<status status="PASS" starttime="20200804 18:41:33.035" endtime="20200804 18:41:33.038"></status>
+</kw>
+<kw name="Read Element Locator">
+<arguments>
+<arg>Registration.password_textbox_name</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<kw name="Read Locator From Json" library="Locators">
+<arguments>
+<arg>${JsonPath}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200804 18:41:33.040" level="INFO">${result} = fld_password</msg>
+<status status="PASS" starttime="20200804 18:41:33.039" endtime="20200804 18:41:33.040"></status>
+</kw>
+<msg timestamp="20200804 18:41:33.040" level="INFO">${password} = fld_password</msg>
+<status status="PASS" starttime="20200804 18:41:33.038" endtime="20200804 18:41:33.040"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${username}</arg>
+<arg>Testing</arg>
+</arguments>
+<msg timestamp="20200804 18:41:33.041" level="INFO">Typing text 'Testing' into text field 'name:fld_username'.</msg>
+<status status="PASS" starttime="20200804 18:41:33.040" endtime="20200804 18:41:33.185"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${email}</arg>
+<arg>testing@testing.com</arg>
+</arguments>
+<msg timestamp="20200804 18:41:33.187" level="INFO">Typing text 'testing@testing.com' into text field 'name:fld_email'.</msg>
+<status status="PASS" starttime="20200804 18:41:33.186" endtime="20200804 18:41:33.330"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${password}</arg>
+<arg>abc</arg>
+</arguments>
+<msg timestamp="20200804 18:41:33.331" level="INFO">Typing text 'abc' into text field 'name:fld_password'.</msg>
+<status status="PASS" starttime="20200804 18:41:33.330" endtime="20200804 18:41:33.411"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200804 18:41:26.300" endtime="20200804 18:41:33.412" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200804 18:41:26.273" endtime="20200804 18:41:33.413"></status>
+</suite>
+<suite id="s1-s1-s3" name="TC 002 Start Close Browser" source="C:\Automation1\TestCases\Login Test Case\TC_002_Start_Close_Browser.robot">
+<kw name="Before Each Test Suite" library="resources1" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Before Each Test Suite</arg>
+</arguments>
+<msg timestamp="20200804 18:41:33.424" level="INFO">Before Each Test Suite</msg>
+<status status="PASS" starttime="20200804 18:41:33.424" endtime="20200804 18:41:33.425"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:33.424" endtime="20200804 18:41:33.425"></status>
+</kw>
+<test id="s1-s1-s3-t1" name="Testikeissi1">
+<kw name="Start Browser and Maximize" library="resources1" type="setup">
+<msg timestamp="20200804 18:41:33.426" level="FAIL">Keyword 'resources1.Start Browser and Maximize' expected 2 arguments, got 0.</msg>
+<status status="FAIL" starttime="20200804 18:41:33.425" endtime="20200804 18:41:33.426"></status>
+</kw>
+<kw name="Close Browser Window" library="resources1" type="teardown">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20200804 18:41:33.430" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20200804 18:41:33.426" endtime="20200804 18:41:33.430"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<msg timestamp="20200804 18:41:33.431" level="INFO">Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20200804 18:41:33.431" endtime="20200804 18:41:33.431"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200804 18:41:33.431" endtime="20200804 18:41:35.565"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:33.426" endtime="20200804 18:41:35.566"></status>
+</kw>
+<tags>
+<tag>Regression</tag>
+</tags>
+<status status="FAIL" starttime="20200804 18:41:33.425" endtime="20200804 18:41:35.567" critical="yes">Setup failed:
+Keyword 'resources1.Start Browser and Maximize' expected 2 arguments, got 0.</status>
+</test>
+<kw name="After Each Test Suite" library="resources1" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>After Each Test Suite</arg>
+</arguments>
+<msg timestamp="20200804 18:41:35.573" level="INFO">After Each Test Suite</msg>
+<status status="PASS" starttime="20200804 18:41:35.573" endtime="20200804 18:41:35.573"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:35.572" endtime="20200804 18:41:35.574"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:33.415" endtime="20200804 18:41:35.574"></status>
+</suite>
+<suite id="s1-s1-s4" name="TC 003 BDD" source="C:\Automation1\TestCases\Login Test Case\TC_003_BDD.robot">
+<test id="s1-s1-s4-t1" name="Test Case In BDD Format">
+<kw name="Given Start Browser and Maximize" library="resources1">
+<arguments>
+<arg>${URL1}</arg>
+<arg>${Browser1}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL1}</arg>
+<arg>${Browser1}</arg>
+</arguments>
+<msg timestamp="20200804 18:41:35.592" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<status status="PASS" starttime="20200804 18:41:35.592" endtime="20200804 18:41:48.463"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200804 18:41:48.463" endtime="20200804 18:41:50.615"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20200804 18:41:50.621" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20200804 18:41:50.615" endtime="20200804 18:41:50.621"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:41:35.591" endtime="20200804 18:41:50.622"></status>
+</kw>
+<kw name="When Create Folder at Runtime" library="resources1">
+<arguments>
+<arg>ABCD</arg>
+<arg>XYZM</arg>
+</arguments>
+<kw name="Create Folder" library="UserKeywords">
+<arguments>
+<arg>${foldername}</arg>
+</arguments>
+<msg timestamp="20200804 18:41:50.625" level="FAIL">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\Automation1\\ABCD'</msg>
+<status status="FAIL" starttime="20200804 18:41:50.624" endtime="20200804 18:41:50.625"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:50.623" endtime="20200804 18:41:50.626"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:35.590" endtime="20200804 18:41:50.627" critical="yes">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\Automation1\\ABCD'</status>
+</test>
+<status status="FAIL" starttime="20200804 18:41:35.580" endtime="20200804 18:41:50.629"></status>
+</suite>
+<suite id="s1-s1-s5" name="TC 004 Login-2" source="C:\Automation1\TestCases\Login Test Case\TC_004_Login-2.robot">
+<test id="s1-s1-s5-t1" name="Login &amp; Sign Up Forms test">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://thetestingworld.com/testings/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200804 18:41:50.704" level="INFO">Opening browser 'chrome' to base url 'https://thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20200804 18:41:50.703" endtime="20200804 18:41:54.682"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_username"]</arg>
+<arg>joppe</arg>
+</arguments>
+<msg timestamp="20200804 18:41:54.684" level="INFO">Typing text 'joppe' into text field '//input[@name="fld_username"]'.</msg>
+<status status="PASS" starttime="20200804 18:41:54.683" endtime="20200804 18:41:54.801"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_email"]</arg>
+<arg>joppelainen@gmail.com</arg>
+</arguments>
+<msg timestamp="20200804 18:41:54.802" level="INFO">Typing text 'joppelainen@gmail.com' into text field '//input[@name="fld_email"]'.</msg>
+<status status="PASS" starttime="20200804 18:41:54.801" endtime="20200804 18:41:54.954"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_password"]</arg>
+<arg>***</arg>
+</arguments>
+<msg timestamp="20200804 18:41:54.955" level="INFO">Typing text '***' into text field '//input[@name="fld_password"]'.</msg>
+<status status="PASS" starttime="20200804 18:41:54.955" endtime="20200804 18:41:55.042"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_cpassword"]</arg>
+<arg>***</arg>
+</arguments>
+<msg timestamp="20200804 18:41:55.043" level="INFO">Typing text '***' into text field '//input[@name="fld_cpassword"]'.</msg>
+<status status="PASS" starttime="20200804 18:41:55.043" endtime="20200804 18:41:55.152"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//a[@href="#"])[16]</arg>
+</arguments>
+<msg timestamp="20200804 18:41:55.154" level="INFO">Clicking link 'xpath=(//a[@href="#"])[16]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200804 18:41:55.570" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200804 18:41:55.166" endtime="20200804 18:41:55.570"></status>
+</kw>
+<msg timestamp="20200804 18:41:55.576" level="FAIL">Link with locator 'xpath=(//a[@href="#"])[16]' not found.</msg>
+<status status="FAIL" starttime="20200804 18:41:55.153" endtime="20200804 18:41:55.576"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:50.702" endtime="20200804 18:41:55.577" critical="yes">Link with locator 'xpath=(//a[@href="#"])[16]' not found.</status>
+</test>
+<doc>A test suite with a single test for Login &amp; Sign Up Forms
+Created by hats' Robotcorder</doc>
+<status status="FAIL" starttime="20200804 18:41:50.631" endtime="20200804 18:41:55.579"></status>
+</suite>
+<suite id="s1-s1-s6" name="TC 004 Login" source="C:\Automation1\TestCases\Login Test Case\TC_004_Login.robot">
+<test id="s1-s1-s6-t1" name="TC_004_Login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://thetestingworld.com/testings/</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200804 18:41:55.587" level="INFO">Opening browser 'Chrome' to base url 'https://thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20200804 18:41:55.587" endtime="20200804 18:41:59.733"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_username"]</arg>
+<arg>joppe</arg>
+</arguments>
+<msg timestamp="20200804 18:41:59.734" level="INFO">Typing text 'joppe' into text field '//input[@name="fld_username"]'.</msg>
+<status status="PASS" starttime="20200804 18:41:59.734" endtime="20200804 18:41:59.993"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_email"]</arg>
+<arg>joppelainen@gmail.com</arg>
+</arguments>
+<msg timestamp="20200804 18:41:59.998" level="INFO">Typing text 'joppelainen@gmail.com' into text field '//input[@name="fld_email"]'.</msg>
+<status status="PASS" starttime="20200804 18:41:59.998" endtime="20200804 18:42:00.317"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_password"]</arg>
+<arg>***</arg>
+</arguments>
+<msg timestamp="20200804 18:42:00.319" level="INFO">Typing text '***' into text field '//input[@name="fld_password"]'.</msg>
+<status status="PASS" starttime="20200804 18:42:00.318" endtime="20200804 18:42:00.468"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name="fld_cpassword"]</arg>
+<arg>***</arg>
+</arguments>
+<msg timestamp="20200804 18:42:00.470" level="INFO">Typing text '***' into text field '//input[@name="fld_cpassword"]'.</msg>
+<status status="PASS" starttime="20200804 18:42:00.469" endtime="20200804 18:42:00.631"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(//a[@href="#"])[16]</arg>
+</arguments>
+<msg timestamp="20200804 18:42:00.632" level="INFO">Clicking link 'xpath=(//a[@href="#"])[16]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200804 18:42:01.081" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200804 18:42:00.646" endtime="20200804 18:42:01.081"></status>
+</kw>
+<msg timestamp="20200804 18:42:01.082" level="FAIL">Link with locator 'xpath=(//a[@href="#"])[16]' not found.</msg>
+<status status="FAIL" starttime="20200804 18:42:00.631" endtime="20200804 18:42:01.082"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:55.585" endtime="20200804 18:42:01.083" critical="yes">Link with locator 'xpath=(//a[@href="#"])[16]' not found.</status>
+</test>
+<status status="FAIL" starttime="20200804 18:41:55.582" endtime="20200804 18:42:01.085"></status>
+</suite>
+<kw name="After Each Test Suite" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test Suite Ended</arg>
+</arguments>
+<msg timestamp="20200804 18:42:01.090" level="INFO">Test Suite Ended</msg>
+<status status="PASS" starttime="20200804 18:42:01.090" endtime="20200804 18:42:01.090"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:42:01.089" endtime="20200804 18:42:01.090"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:41:13.954" endtime="20200804 18:42:01.090"></status>
+</suite>
+<suite id="s1-s2" name="Registration" source="C:\Automation1\TestCases\Registration">
+<suite id="s1-s2-s1" name="TC 003 Start Close Browser" source="C:\Automation1\TestCases\Registration\TC_003_Start_Close_Browser.robot">
+<kw name="Before Each Test Suite" library="resources1" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Before Each Test Suite</arg>
+</arguments>
+<msg timestamp="20200804 18:42:01.111" level="INFO">Before Each Test Suite</msg>
+<status status="PASS" starttime="20200804 18:42:01.110" endtime="20200804 18:42:01.111"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:42:01.110" endtime="20200804 18:42:01.111"></status>
+</kw>
+<test id="s1-s2-s1-t1" name="Testikeissi1">
+<kw name="Start Browser and Maximize" library="resources1" type="setup">
+<msg timestamp="20200804 18:42:01.113" level="FAIL">Keyword 'resources1.Start Browser and Maximize' expected 2 arguments, got 0.</msg>
+<status status="FAIL" starttime="20200804 18:42:01.112" endtime="20200804 18:42:01.113"></status>
+</kw>
+<kw name="Close Browser Window" library="resources1" type="teardown">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20200804 18:42:01.119" level="INFO">${Title} = Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20200804 18:42:01.114" endtime="20200804 18:42:01.120"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<msg timestamp="20200804 18:42:01.120" level="INFO">Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20200804 18:42:01.120" endtime="20200804 18:42:01.120"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200804 18:42:01.120" endtime="20200804 18:42:03.714"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:42:01.113" endtime="20200804 18:42:03.714"></status>
+</kw>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" starttime="20200804 18:42:01.112" endtime="20200804 18:42:03.715" critical="yes">Setup failed:
+Keyword 'resources1.Start Browser and Maximize' expected 2 arguments, got 0.</status>
+</test>
+<kw name="After Each Test Suite" library="resources1" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>After Each Test Suite</arg>
+</arguments>
+<msg timestamp="20200804 18:42:03.718" level="INFO">After Each Test Suite</msg>
+<status status="PASS" starttime="20200804 18:42:03.718" endtime="20200804 18:42:03.718"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:42:03.717" endtime="20200804 18:42:03.718"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:42:01.100" endtime="20200804 18:42:03.718"></status>
+</suite>
+<suite id="s1-s2-s2" name="TC 004 FetchData" source="C:\Automation1\TestCases\Registration\TC_004_FetchData.robot">
+<test id="s1-s2-s2-t1" name="Robot Fetch Data">
+<kw name="Concatenate Username and Password" library="resources1">
+<arguments>
+<arg>Testing</arg>
+<arg>World</arg>
+</arguments>
+<kw name="Concetenate Two Values" library="UserKeywords">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}'</arg>
+</arguments>
+<assign>
+<var>${resultval}</var>
+</assign>
+<msg timestamp="20200804 18:42:03.738" level="INFO">${resultval} = Testing World'</msg>
+<status status="PASS" starttime="20200804 18:42:03.737" endtime="20200804 18:42:03.738"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resultval}</arg>
+</arguments>
+<msg timestamp="20200804 18:42:03.738" level="INFO">Testing World'</msg>
+<status status="PASS" starttime="20200804 18:42:03.738" endtime="20200804 18:42:03.738"></status>
+</kw>
+<status status="PASS" starttime="20200804 18:42:03.736" endtime="20200804 18:42:03.738"></status>
+</kw>
+<kw name="Start Browser and Maximize" library="resources1">
+<msg timestamp="20200804 18:42:03.739" level="FAIL">Keyword 'resources1.Start Browser and Maximize' expected 2 arguments, got 0.</msg>
+<status status="FAIL" starttime="20200804 18:42:03.739" endtime="20200804 18:42:03.739"></status>
+</kw>
+<status status="FAIL" starttime="20200804 18:42:03.735" endtime="20200804 18:42:03.739" critical="yes">Keyword 'resources1.Start Browser and Maximize' expected 2 arguments, got 0.</status>
+</test>
+<status status="FAIL" starttime="20200804 18:42:03.723" endtime="20200804 18:42:03.742"></status>
+</suite>
+<status status="FAIL" starttime="20200804 18:42:01.097" endtime="20200804 18:42:03.750"></status>
+</suite>
+<status status="FAIL" starttime="20200804 18:41:13.928" endtime="20200804 18:42:03.756"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="7">Critical Tests</stat>
+<stat pass="1" fail="7">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Regression</stat>
+<stat pass="0" fail="1">Sanity</stat>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="7" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="5" id="s1-s1" name="Login Test Case">TestCases.Login Test Case</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="DataTest">TestCases.Login Test Case.DataTest</stat>
+<stat pass="1" fail="0" id="s1-s1-s2" name="TC 001 Start Close Browser">TestCases.Login Test Case.TC 001 Start Close Browser</stat>
+<stat pass="0" fail="1" id="s1-s1-s3" name="TC 002 Start Close Browser">TestCases.Login Test Case.TC 002 Start Close Browser</stat>
+<stat pass="0" fail="1" id="s1-s1-s4" name="TC 003 BDD">TestCases.Login Test Case.TC 003 BDD</stat>
+<stat pass="0" fail="1" id="s1-s1-s5" name="TC 004 Login-2">TestCases.Login Test Case.TC 004 Login-2</stat>
+<stat pass="0" fail="1" id="s1-s1-s6" name="TC 004 Login">TestCases.Login Test Case.TC 004 Login</stat>
+<stat pass="0" fail="2" id="s1-s2" name="Registration">TestCases.Registration</stat>
+<stat pass="0" fail="1" id="s1-s2-s1" name="TC 003 Start Close Browser">TestCases.Registration.TC 003 Start Close Browser</stat>
+<stat pass="0" fail="1" id="s1-s2-s2" name="TC 004 FetchData">TestCases.Registration.TC 004 FetchData</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200804 18:41:13.913" level="ERROR">Error in file 'C:\Automation1\TestCases\Login Test Case\TC_001_Start_Close_Browser.robot' on line 19: Non-existing setting 'Arguments'.</msg>
+</errors>
+</robot>
